@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      color: pink;
+      font: 24px/1.5 'Microsoft YaHei';
+    }
+
+    div {
+      /* 子元素继承了父元素 body的行高 1.5 即24*1.5px */
+      /* 改变了font-size就改变了行高 */
+      font-size: 28px;
+      line-height: 28px;
+      height: 28px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div>粉红色的回忆</div>
+  <p>粉红色的回忆</p>
+  <ul>
+    <li>我没有指定文字大小</li>
+  </ul>
+</body>
+</html>
