@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 任何元素都可以浮动 不管原先是什么模式的元素,添加浮动之后具有行内块元素的相似的特性*/
+    /* 行内块元素不给宽度 那么宽度由内容决定 */
+    .fl {
+      float: left;
+      /* width: 200px; */
+      height: 100px;
+      background-color: pink;
+      margin-right: 10px;
+    }
+
+    /* 如果行类元素有了浮动,则不需要转换块级\行内块元素就可以直接给高度和宽度 */
+    p {
+      float: right;
+      height: 200px;
+      background-color: purple;
+      margin-left: 10px;
+    }
+    /* span {
+      border: 1px solid red;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+    } */
+
+    div {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <span class="fl">1</span>
+  <span class="fl">2</span>
+
+  <div class="fl">div</div>
+  <p>ppppppp</p>
+  <p>sfsdfds</p>
+
+  <!-- <div>
+    3
+  </div>
+  <div>
+    4
+  </div> -->
+</body>
+</html>
