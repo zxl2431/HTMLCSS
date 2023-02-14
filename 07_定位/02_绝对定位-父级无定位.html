@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      background-color: pink;
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+
+      position: relative;
+    }
+
+    .son {
+      background-color: skyblue;
+      width: 200px;
+      height: 200px;
+      /* 相对定位是相对于父级的 */
+      /* position: relative;
+      top: 100px;
+      left: 100px; */
+      /* 绝对定位在父级没有定位的情况下是相对于可视窗口的, 在父级有定位的情况下是相对于父级的  */
+      position: absolute;
+      right: 50px;
+      bottom: 20px;
+    }
+
+    .footer {
+      height: 10000px;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+
+  <div class="footer"></div>
+</body>
+</html>
