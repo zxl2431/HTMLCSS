@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .clearfix:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    } 
+
+    
+    .clearfix {
+      /* IE6,7专有 */
+      *zoom: 1
+    }
+    
+
+    .box {
+      background-color: pink;
+      width: 1226px;
+      border: 1px solid red;
+      margin: 0 auto;
+      /* height: 300px; */
+    }
+
+    .damao {
+      float: left;
+      background-color: blue;
+      height: 250px;
+      width: 340px;
+      margin-left: 10px;
+    }
+
+    .ermao {
+      float: left;
+      background-color: yellow;
+      height: 350px;
+      width: 400px;
+    }
+
+    .footer {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="box clearfix">
+    <div class="damao">大毛</div>
+    <div class="ermao">二毛</div>
+  </div>
+  <div class="footer">footer</div>
+</body>
+</html>
