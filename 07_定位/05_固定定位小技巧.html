@@ -5,8 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+    .w {
+      width: 800px;
+      height: 1400px;
+      background-color: pink;
+      margin: 0 auto;
+    }
+
+    .fixed {
+      background-color: skyblue;
+      height: 150px;
+      width: 50px;
+      position: fixed;
+      /* 1.走浏览器宽度的一半 */
+      left: 50%;
+      /* 2.利用margin走版心盒子的一半 */
+      margin-left: 405px;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="fixed"></div>
+  <div class="w">版心盒子 800像素</div>
 </body>
 </html>

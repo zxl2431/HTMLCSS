@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      background-color: pink;
+      /* 行内元素宽度和高度设置无效 */
+      width: 200px;
+      height: 150px;
+      /* 一旦给了浮动或者绝对定位, fix固定定位以后脱离了标准流就可以设置高度和宽度了 */
+      position: absolute;
+      top: 300px;
+    }
+
+    div {
+      background-color: skyblue;
+      /* 块级元素一旦给了浮动或者绝对定位, fix固定定位, 不设置宽度和高度的情况下, 由内容决定 */
+      position: absolute;
+      
+    }
+  </style>
+</head>
+<body>
+  <span>123</span>
+
+  <div>abcd</div>
+</body>
+</html>
