@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .tb-promo {
+      background-color: pink;
+      width: 520px;
+      height: 280px;
+      margin: 100px auto;
+      position: relative;
+    }
+
+    .tb-promo img {
+      width: 520px;
+      height: 280px;
+    }
+
+    .prev{
+      width: 20px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, .4);
+      text-decoration: none;
+      line-height: 30px;
+      color: #fff;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      
+    }
+
+    .next {
+      width: 20px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, .4);
+      text-decoration: none;
+      line-height: 30px;
+      color: #fff;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+     
+    }
+
+    .prev {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    .next {
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+
+    .promo-nav {
+      width: 70px;
+      height: 14px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 7px;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      margin-left: -35px;
+    }
+
+    .promo-nav li {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      float: left;
+      margin: 3px;
+      border-radius: 50%;
+    }
+
+    .promo-nav .selected {
+      background-color: #ff5000;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="tb-promo">
+    <img src="images/tb.jpg" alt="">
+    <!-- 左侧按钮 -->
+    <a href="#" class="prev">&lt;</a>
+    <!-- 右侧按钮 -->
+    <a href="#" class="next">&gt;</a>
+    <!-- 小圆点 -->
+    <ul class="promo-nav">
+      <li class="selected"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+</html>
