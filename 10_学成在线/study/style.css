@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.w {
+  width: 1200px;
+  margin: auto;
+}
+
+.header {
+  height: 42px;
+  /* background-color: pink; */
+  margin: 30px auto;
+}
+
+.banner {
+  height: 421px;
+  background-color: #1c036c;
+}
+
+.banner .w {
+  height: 421px;
+  background: url(images/banner2_20190819_210028.png) no-repeat top center;
+}
+
+.goods {
+  height: 60px;
+  background-color: skyblue;
+  margin-top: 10px;
+  box-shadow: 0 2px 3px 3px rgba(0,0,0, 0.1);
+}
+
+.box {
+  background-color: pink;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.footer {
+  height: 415px;
+  background-color: blue;
+}
+
+.logo {
+  float: left;
+  width: 198px;
+  height: 42px;
+}
+
+.nav {
+  float: left;
+  margin-left: 60px;
+}
+
+.nav ul li {
+  float: left;
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+  padding: 0 10px;
+  color: #050505;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.search {
+  float: left;
+  width: 412px;
+  height: 42px;
+  margin-left: 70px;
+}
+
+.search input {
+  float: left;
+  width: 345px;
+  height: 40px;
+  border: 1px solid #00a4ff;
+  border-right: 0;
+  color: #bfbfbf;
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+.search button {
+  float: left;
+  width: 50px;
+  height: 42px;
+  border: 0;
+  background:url(images/btn.png);
+}
+
+.user {
+  float: left;
+  height: 42px;
+  line-height: 42px;
+  margin-left: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.user img {
+  margin-top: 5px;
+}
