@@ -27,3 +27,8 @@ button, input {
   border: 0;
   outline: none;
 }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}

@@ -19,7 +19,7 @@
 
 .w {
   width: 1200px;
-  height: 31px;
+  /* height: 31px; */
   margin: 0 auto;
   /* background-color:  pink; */
 }
@@ -164,11 +164,34 @@
 }
 
 .dropdown .dd {
-  display: none;
+  /* display: none; */
   width: 210px;
   height: 465px;
   background-color: #c81623;
   margin-top: 2px;
+}
+
+.dropdown .dd ul li {
+  position: relative;
+  height: 31px;
+  line-height: 31px;
+  margin-left: 2px;
+  padding-left: 10px;
+}
+
+.dropdown .dd ul li::after {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  color: #fff;
+  font-family: 'icomoon';
+  content: '\e920';
+  font-size: 14px;
+}
+
+.dropdown .dd ul li a {
+  font-size: 14px;
+  color: #fff;
 }
 
 .nav .navitems {
@@ -186,6 +209,7 @@
   font-size: 16px;
   padding: 0 25px;
 }
+
 
 .footer {
   height: 415px;
@@ -211,6 +235,14 @@
   height: 50px;
   background: url(../images/icons.png) no-repeat -252px -2px;
   margin-right: 8px;
+}
+
+.service_txt h4 {
+  font-size: 14px;
+}
+
+.service_txt p {
+  font-size: 12px;
 }
 
 .mod_help {
