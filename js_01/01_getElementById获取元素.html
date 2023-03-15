@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box1">获取元素</div>
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+
+  <ul id="ul1">
+    <li><a href="#">网址1</a></li>
+    <li><a href="#">网址2</a></li>
+    <li><a href="#">网址3</a></li>
+  </ul>
+
+  <ol id="ol">
+    <li>生僻字</li>
+    <li>生僻字</li>
+    <li>生僻字</li>
+    <li>生僻字</li>
+  </ol>
+
+  <a href="#">百度一下</a>
+
+
+  <script>
+    // 1.通过id获取元素
+    // var box1 = document.getElementById('box1');
+    var box1 = document.getElementsByTagName('div')
+    console.log(box1);  // 以字符串的形式打印对象本身
+    console.dir(box1);  // 打印一个对象所有的属性和方法
+    console.log(typeof box1);
+    // console.log(document.body);
+
+    // 2.通过标签名获取元素
+    // ul = document.getElementsByTagName('ul');
+    ul1 = document.getElementById('ul1');
+    console.log(ul1);
+    console.log(typeof ul1); //都是一个对象
+
+    // console.log 和 console.dir 的区别 
+    // 如果获取的是getElement不带s 是有区别的 一个打印本身 一个打印对象 
+    // 如果获取的是getElements 好像没有区别
+
+    console.log('---------------');
+
+    var lis = document.getElementsByTagName('li');
+    console.log(lis);
+    console.log(lis[0]);
+
+    for(var i=0; i<lis.length; i++) {
+      console.log(lis[i]);
+    }
+
+    console.log('----------------');
+
+    // 页面上现在有许多li; getElementsByTagName的时候就要先指定唯一的父元素
+    var ol = document.getElementById('ol');
+    console.log(ol.getElementsByTagName('li'));
+
+  </script>
+</body>
+</html>
