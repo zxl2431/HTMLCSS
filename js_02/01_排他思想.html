@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+
+    <script>
+      // 1.获取所有的按钮元素
+      var btns = document.getElementsByTagName("button");
+      for (let i = 0; i < btns.length; i++) {
+        console.log(i);
+        btns[i].onclick = function () {
+          // (1) 我们先把所有的按钮背景颜色去掉  干掉所有人
+          for (var j = 0; j < btns.length; j++) {
+            btns[j].style.backgroundColor = "";
+          }
+
+          btns[i].style.backgroundColor = "pink";
+        };
+      }
+    </script>
+  </body>
+</html>
