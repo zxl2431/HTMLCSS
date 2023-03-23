@@ -6,5 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+      <li>我是li1</li>
+      <li>我是li2</li>
+      <li>我是li3</li>
+      <li>我是li4</li>
+    </ul>
+    <ol>
+      <li>我是li</li>
+      <li>我是li</li>
+      <li>我是li</li>
+      <li>我是li</li>
+    </ol>
+
+    <div class="demo">
+      <div class="box">
+        <span class="erweima"></span>
+      </div>
+    </div>
+
+    <script>
+      // var box = document.querySelector(".box");
+      // console.log(box);
+      // console.dir(box);
+
+      //1.父节点
+      var erweima = document.querySelector(".erweima");
+      console.log(erweima);
+      console.log(erweima.parentNode);
+
+      //2.子节点操作
+      var ul = document.querySelector("ul");
+      var lis = ul.querySelectorAll("li");
+      // 子节点 childNodes 所有的子节点 包含元素节点 文本节点
+      console.log(ul.childNodes);
+      console.log(ul.childNodes[0].nodeType);
+      console.log(ul.childNodes[1].nodeType);
+      // children 获取所有的子元素节点 日常使用
+      console.log(ul.children);
+      console.log("~~~~~~~~~~~~~~~");
+      //3. 最后一个子元素和第一个子元素
+      let ol = document.querySelector("ol");
+      // firstChild 第一个子节点 不管是文本节点还是元素节点
+      console.log(ol.firstChild);
+      console.log(ol.lastChild);
+      // firstElementChild 返回第一个子元素节点 兼容性问题 IE9才支持
+      console.log(ol.firstElementChild);
+      console.log(ol.lastElementChild);
+      // 实际开发中的 写法
+      console.log(ol.children[0]);
+      console.log(ol.children[ol.children.length - 1]);
+
+      console.log("----------------");
+
+      // 4.兄弟节点
+      let div = document.querySelector("div");
+      // 4.1 nextSibling 下一个兄弟节点 包含元素节点或则文本节点
+      console.log(div.nextSibling);
+      console.log(div.previousSibling);
+      // 4.2 nextElementSibling 兄弟元素节点
+      console.log(div.nextElementSibling);
+      console.log(div.previousElementSibling);
+    </script>
+  </body>
 </html>
