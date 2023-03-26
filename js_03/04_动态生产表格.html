@@ -5,6 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        width: 500px;
+        margin: 100px auto;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      td,
+      th {
+        border: 1px solid #333;
+      }
+
+      thead tr {
+        height: 40px;
+        background-color: #ccc;
+      }
+    </style>
   </head>
   <body>
     <table>
@@ -18,5 +36,64 @@
       </thead>
       <tbody></tbody>
     </table>
+
+    <script>
+      // 1.先去准备好学生的数据
+      var datas = [
+        {
+          name: "魏璎珞",
+          subject: "JavaScript",
+          score: 100,
+        },
+        {
+          name: "弘历",
+          subject: "JavaScript",
+          score: 98,
+        },
+        {
+          name: "傅恒",
+          subject: "JavaScript",
+          score: 99,
+        },
+        {
+          name: "明玉",
+          subject: "JavaScript",
+          score: 88,
+        },
+        {
+          name: "大猪蹄子",
+          subject: "JavaScript",
+          score: 0,
+        },
+      ];
+
+      // 2.往tbody里创建行
+      var tbody = document.querySelector("tbody");
+      for (let i = 0; i < datas.length; i++) {
+        // 2.1 创建行
+        let tr = document.createElement("tr");
+        tbody.appendChild(tr);
+        // 2.2 创建列
+        for (let k in datas[i]) {
+          // 创建单元格
+          let td = document.createElement("td");
+          td.innerHTML = datas[i][k];
+          tr.appendChild(td);
+        }
+
+        let td = document.createElement("td");
+        td.innerHTML = '<a href="javascript:;">删除</a>';
+        tr.appendChild(td);
+      }
+
+      // 4.删除操作
+      let as = document.querySelectorAll("a");
+      for (let i = 0; i < as.length; i++) {
+        as[i].onclick = function () {
+          // tr > td > a 移除的是a标签的 父标签的父标签
+          tbody.removeChild(this.parentNode.parentNode);
+        };
+      }
+    </script>
   </body>
 </html>
