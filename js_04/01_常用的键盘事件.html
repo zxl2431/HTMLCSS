@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.keyup按下弹起的时候触发
+      document.addEventListener("keyup", function (e) {
+        console.log("keyup:" + e.keyCode);
+
+        if (e.keyCode == 65) {
+          alert("您按下的a键");
+        } else {
+          alert("您没有按下a键");
+        }
+      });
+
+      // 2.keypress按键按下的时候触发 不能识别功能键 如 ctrl shift 箭头灯
+      document.addEventListener("keypress", function () {
+        console.log("我按下了press");
+      });
+
+      // 3.keydown 按下的时候触发, 能识别功能键
+      document.addEventListener("keydown", function () {
+        console.log("我按下了down");
+      });
+
+      // 三个事件的执行顺序 keydown -> keypress -> keyup
+    </script>
+  </body>
+</html>
