@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: absolute;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+        top: 200px;
+        display: block;
+        width: 150px;
+        height: 150px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn500">点击夏雨荷到500</button>
+    <button class="btn800">点击夏雨荷到800</button>
+    <span>夏雨荷</span>
+
+    <script>
+      // 缓动动画的函数封装obj目标对象 target 目标位置
+      // 思路:
+      // 1.让盒子每次移动的距离变小、速度就会慢慢落下来
+      // 2.核心算法是(目标值 - 现在位置) / 10 作为每次移动的距离
+      // 3.停止条件是: 当前盒子位置等于目标位置就停止定时器
+
+      function animate(obj, target) {
+        clearInterval(obj.timer);
+
+        if (obj.style.left < target) {
+          obj.timer = setInterval(function () {
+            let step = (target - obj.offsetLeft) / 10;
+            if (target == obj.offsetLeft) {
+              clearInterval(obj.timer);
+            }
+
+            // 设置目标对象每次的变化
+            obj.style.left = obj.offsetLeft + step + "px";
+            console.log(obj.style.left);
+          }, 20);
+        }
+      }
+
+      let span = document.querySelector("span");
+      let btn500 = document.querySelector(".btn500");
+      let btn800 = document.querySelector(".btn800");
+
+      btn500.addEventListener("click", function () {
+        animate(span, 500);
+      });
+
+      btn800.addEventListener("click", function () {
+        animate(span, 800);
+      });
+    </script>
+  </body>
+</html>
