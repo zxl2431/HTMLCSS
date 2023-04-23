@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bg {
+        background-color: black;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .sharp {
+        width: 300px;
+        height: 200px;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one two"></div>
+    <button>开关灯</button>
+    <div class="red">你好</div>
+    <script>
+      // classList 返回元素类名
+      let div = document.querySelector("div");
+      console.log(div.classList);
+
+      // 增加属性
+      div.classList.add("three");
+      console.log(div.classList);
+
+      // 删除类名
+      div.classList.remove("one");
+      console.log(div.classList);
+
+      // 切换类
+      let btn = document.querySelector("button");
+      let div2 = document.querySelector(".red");
+      btn.addEventListener("click", function () {
+        // document.body.classList.toggle("bg");
+        // console.log(document.body.classList);
+        div2.classList.toggle("sharp");
+        console.log(div2.classList);
+      });
+    </script>
+  </body>
+</html>
